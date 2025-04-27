@@ -1,4 +1,58 @@
-<head> </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            background-color: #e0f7fa; /* calm light blue */
+            color: #006064; /* bright teal text */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+        p {
+            font-size: 1.5em;
+            margin-bottom: 2em;
+        }
+        .pipeline {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            animation: move 5s infinite linear;
+        }
+        .stage {
+            padding: 10px 20px;
+            background-color: #4dd0e1;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        @keyframes move {
+            0% {transform: translateX(0);}
+            50% {transform: translateX(20px);}
+            100% {transform: translateX(0);}
+        }
+    </style>
+</head>
 <body>
-    <p>Hello World!</p>
+    <h1>Welcome!</h1>
+    <p>This is my first AWS CI/CD Project!</p>
+
+    <div class="pipeline">
+        <div class="stage">Source</div>
+        <div class="stage">Build</div>
+        <div class="stage">Test</div>
+        <div class="stage">Deploy</div>
+    </div>
 </body>
+</html>
